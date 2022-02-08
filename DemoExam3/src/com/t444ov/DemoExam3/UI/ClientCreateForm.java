@@ -113,7 +113,7 @@ public class ClientCreateForm extends BaseForm {
             try {
                 ClientEntityManager.insert(client);
                 System.out.println(client);
-                DialogUtil.showError(this,"Клиент успешно добавлен");
+                DialogUtil.showInfo(this,"Клиент успешно добавлен");
                 dispose();
                 new ClientTableForm();
             } catch (SQLException ex) {
