@@ -138,7 +138,7 @@ public class ClientEditForm extends BaseForm {
 
             try {
                 ClientEntityManager.update(client);
-                DialogUtil.showError(this,"Клиент успешно отредактирован");
+                DialogUtil.showInfo(this,"Клиент успешно отредактирован");
                 dispose();
                 new ClientTableForm();
             } catch (SQLException ex) {
@@ -151,7 +151,7 @@ public class ClientEditForm extends BaseForm {
             if (JOptionPane.showConfirmDialog(this,"Вы точно хотите удалить данную запись?","Подтверждение удаления записи",JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
                 try {
                     ClientEntityManager.delete(client);
-                    DialogUtil.showError(this,"Клиент успешно удален");
+                    DialogUtil.showInfo(this,"Клиент успешно удален");
                     dispose();
                     new ClientTableForm();
                 } catch (SQLException ex) {
